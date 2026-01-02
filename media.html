@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media | Hani</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HANI.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="media.html" style="color: var(--accent-gold);">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section class="media-container">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Creative Media</h2>
+        
+        <h3 class="media-section-title" data-aos="fade-up" data-aos-delay="200">Musik Pilihan</h3>
+        <div class="music-grid">
+            <div class="music-card" data-aos="zoom-in" data-aos-delay="300">
+                <h3>ABG TUA</h3>
+                <p>“Salah satu musik Indonesia yang saya sukai dan sering saya dengarkan adalah pop, karena liriknya sederhana, melodinya enak, dan mudah dinikmati bersama teman.” </p>
+                <audio controls class="music-player">
+                    <source src="./assets/music/ABG TUA.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            
+            <div class="music-card" data-aos="zoom-in" data-aos-delay="450">
+                <h3>Tenxi B5</h3>
+                <p>“Musik Indonesia yang diciptakan Tenxi memiliki irama modern, lirik yang mudah diingat, dan sering digemari anak muda karena terasa santai dan seru.”</p>
+                <audio controls class="music-player">
+                    <source src="./assets/music/BINTANG 5.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="music-card" data-aos="zoom-in" data-aos-delay="600">
+                <h3>Sedia Payung</h3>
+                <p>“DJ ‘Sedia Payung’ adalah salah satu musik yang saya sukai karena ritmenya asyik, membuat semangat, dan enak didengar saat santai atau berkumpul bersama teman-teman.”</p>
+                <audio controls class="music-player">
+                    <source src="./assets/music/SEDIA PAYUNG.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <h3 class="media-section-title" data-aos="fade-up" data-aos-delay="700">Galeri Foto</h3>
+        <div class="photo-grid">
+            <div class="photo-card" data-aos="fade-up" data-aos-delay="800">
+                <img src="./assets/img/Profile1.jpeg" alt="FOT01" class="photo-img">
+                <div class="photo-overlay-info">
+                    <h3>FOTO TANDING</h3>
+                    <p>Potret saat ingin melakukan tanding silat di jakarta</p>
+                </div>
+            </div>
+
+            <div class="photo-card" data-aos="fade-up" data-aos-delay="950">
+                <img src="./assets/img/Profile2.jpeg" alt="FOTO2" class="photo-img">
+                <div class="photo-overlay-info">
+                    <h3>MIRROR FOTO</h3>
+                    <p>Foto mirror juga tapi saat sedang acara besar keluarga di bandung</p>
+                </div>
+            </div>
+
+            <div class="photo-card" data-aos="fade-up" data-aos-delay="1100">
+                <img src="./assets/img/Profile3.jpeg" alt="FOTO3" class="photo-img">
+                <div class="photo-overlay-info">
+                    <h3>MIRROR FOTO</h3>
+                    <p>Mirror foto saat sedang berada di jakarta untuk event tahunan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+
+        // Hamburger Menu Logic
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `linkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+
+    <footer data-aos="fade-in" data-aos-duration="1000">
+    <div class="footer-content">
+        <div class="footer-logo">HANI<span>.</span></div>
+        
+       <ul class="social-links">
+          <li>
+            <a
+              href="https://www.instagram.com/hansalmn13/?igsh=cjIycWoxZnEzczJk&utm_source=qr#"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://wa.me/6282377897342" target="_blank">Whatsapp</a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@hansalman_?_r=1&_t=ZS-92gYbVjgq5R"
+              target="_blank"
+              >Tiktok</a
+            >
+          </li>
+        </ul>
+    </div>
+    
+    <div class="copyright">
+        &copy; 2025 Hani Creative Studio. All Rights Reserved.
+    </div>
+</footer>
+</body>
+</html>

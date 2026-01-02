@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Hani</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">HANI.</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="project.html" style="color: var(--accent-gold)">Project</a>
+        </li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <section class="project-container">
+      <h2 data-aos="fade-down" data-aos-duration="1000">Selected Works</h2>
+
+      <div class="project-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrapper">
+            <img src="./assets/project/PROJECT1.png" alt="Project 1" class="project-img" />
+            <div class="project-overlay">
+              <span>Lihat Detail</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Menghitung Usia</h3>
+            <p>
+              Membuat input data tanggal lahir untuk menghitung usia secara otomatis.
+            </p>
+            <span class="project-tag">HTML CSS JS</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-img-wrapper">
+            <img src="./assets/project/PROJECT2.png" alt="Project 2" class="project-img" />
+            <div class="project-overlay">
+              <span>Lihat Detail</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Menghitung Total Belanja</h3>
+            <p>
+              Membuat input data barang dan harga untuk menghitung total belanjaan.
+            </p>
+            <span class="project-tag">HTML CSS JS</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-img-wrapper">
+            <img src="./assets/project/PROJECT3.png" alt="Project 3" class="project-img" />
+            <div class="project-overlay">
+              <span>Lihat Detail</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Formulir Karyawan</h3>
+            <p>
+              Membuat formulir pendaftaran karyawan baru dengan html
+            </p>
+            <span class="project-tag">HTML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+
+      // Hamburger Menu Logic
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("nav-active");
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `linkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`;
+          }
+        });
+        hamburger.classList.toggle("toggle");
+      });
+    </script>
+
+    <footer data-aos="fade-in" data-aos-duration="1000">
+    <div class="footer-content">
+        <div class="footer-logo">HANI<span>.</span></div>
+        
+        <ul class="social-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Tiktok</a></li>
+        </ul>
+    </div>
+    
+    <div class="copyright">
+        &copy; 2025 Hani Creative Studio. All Rights Reserved.
+    </div>
+</footer>
+  </body>
+</html>

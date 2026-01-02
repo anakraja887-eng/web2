@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Hani</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">HANI.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" style="color: var(--accent-gold);">About</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="about-img-container" data-aos="fade-right" data-aos-duration="1200">
+            <img src="./assets/img/Profile.jpeg" alt="Foto Hani" class="about-img">
+        </div>
+
+        <div class="about-text" data-aos="fade-left" data-aos-duration="1200">
+            <h2>Tentang Saya</h2>
+            <p>
+                Halo! Saya <strong>Hani</strong>. Seorang desainer kreatif yang berfokus pada estetika minimalis dan pengalaman pengguna yang bermakna. Saya percaya bahwa setiap detail dalam desain memiliki cerita tersendiri. Dengan latar belakang di dunia seni digital, saya menggabungkan kreativitas dengan teknologi untuk membangun produk yang elegan.
+            </p>
+
+            <div class="skills">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>WEB DESIGN</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-per" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>UI/UX STRATEGY</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-per" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>BRANDING</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-per" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Hamburger Menu Logic (Tetap sama agar berfungsi)
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `linkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+
+    <footer data-aos="fade-in" data-aos-duration="1000">
+    <div class="footer-content">
+        <div class="footer-logo">HANI<span>.</span></div>
+        
+         <ul class="social-links">
+          <li>
+            <a
+              href="https://www.instagram.com/hansalmn13/?igsh=cjIycWoxZnEzczJk&utm_source=qr#"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://wa.me/6282377897342" target="_blank">Whatsapp</a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@hansalman_?_r=1&_t=ZS-92gYbVjgq5R"
+              target="_blank"
+              >Tiktok</a
+            >
+          </li>
+        </ul>
+    </div>
+    
+    <div class="copyright">
+        &copy; 2025 Hani Creative Studio. All Rights Reserved.
+    </div>
+</footer>
+</body>
+</html>
